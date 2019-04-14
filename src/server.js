@@ -18,7 +18,7 @@ io.on("connection", socket => {
 mongoose.connect(
     "mongodb+srv://thobias:thobias123@cluster0-ydkm6.mongodb.net/thobias?retryWrites=true",
     {
-        useNewUrlParser: true
+        useNewUrlParser: true,
     }
 );
 
@@ -30,8 +30,8 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use("/files", express.static(path.resolve(__dirname, "..", "tmp")));
+app.use('/files', express.static(path.resolve(__dirname, '..', 'tmp')));
 
-app.use(require("./routes"));
+app.use(require('./routes'));
 
 server.listen(process.env.PORT || 3333);
