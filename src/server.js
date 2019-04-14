@@ -16,7 +16,7 @@ io.on("connection", socket => {
 });
 
 mongoose.connect(
-    "mongodb+srv://thobias:thobias123@cluster0-ydkm6.mongodb.net/test?retryWrites=true",
+    "mongodb+srv://thobias:thobias123@cluster0-ydkm6.mongodb.net/thobias?retryWrites=true",
     {
         useNewUrlParser: true
     }
