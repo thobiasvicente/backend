@@ -9,11 +9,11 @@ app.use(cors());
 const server = require("http").Server(app);
 const io = require("socket.io")(server);
 
-io.on("connection", socket =>{
-    socket.on("connectRoom", box =>{
+io.on("connection", socket => {
+    socket.on("connectRoom", box => {
         socket.join(box);
-    })
-})
+    });
+});
 
 mongoose.connect(
     "mongodb+srv://thobias:thobias123@cluster0-ydkm6.mongodb.net/test?retryWrites=true",
@@ -22,7 +22,7 @@ mongoose.connect(
     }
 );
 
-app.use((req, res, next)=>{
+app.use((req, res, next) => {
     req.io = io;
 
     return next();
