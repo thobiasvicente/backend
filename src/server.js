@@ -15,7 +15,7 @@ io.on("connection", socket => {
     });
 });
 
-mongoose.connect("mongodb+srv://thobias:@Thobias123@cluster0-ydkm6.mongodb.net/test?retryWrites=true",
+mongoose.connect("mongodb+srv://omnistack:omnistack@cluster0-pc4xu.mongodb.net/test?retryWrites=true",
     {
         useNewUrlParser: true,
     }
