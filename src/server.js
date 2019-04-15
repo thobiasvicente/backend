@@ -19,6 +19,7 @@ mongoose.connect(
     "mongodb+srv://thobias:thobias123@cluster0-ydkm6.mongodb.net/thobias?retryWrites=true",
     {
         useNewUrlParser: true,
+        
     }
 );
 
